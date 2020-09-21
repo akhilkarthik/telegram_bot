@@ -34,8 +34,8 @@ class BotHandler:
         return last_update
 
 
-token = '1324359649:AAF8gOdap-1Wz8CSPfD2O4_juGUb8ON4n7Q' #Token of your bot
-magnito_bot = BotHandler(token) #Your bot's name
+token = 'Tocken' #Token of your bot
+aleena_bot = BotHandler(token) #Your bot's name
 
 
 
@@ -44,7 +44,7 @@ def main():
     print('hi, now launching...')
 
     while True:
-        all_updates=magnito_bot.get_updates(new_offset)
+        all_updates=aleena_bot.get_updates(new_offset)
 
         if len(all_updates) > 0:
             for current_update in all_updates:
@@ -65,10 +65,10 @@ def main():
                     first_chat_name = "unknown"
 
                 if first_chat_text == 'Hi':
-                    magnito_bot.send_message(first_chat_id, 'Morning ' + first_chat_name)
+                    aleena_bot.send_message(first_chat_id, 'Morning ' + first_chat_name)
                     new_offset = first_update_id + 1
                 else:
-                    magnito_bot.send_message(first_chat_id, 'How are you doing '+first_chat_name)
+                    aleena_bot.send_message(first_chat_id, 'How are you doing '+first_chat_name)
                     new_offset = first_update_id + 1
 
 
